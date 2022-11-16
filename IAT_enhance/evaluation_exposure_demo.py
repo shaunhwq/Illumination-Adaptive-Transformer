@@ -31,5 +31,5 @@ with torch.no_grad():
 
         mul, add, enhanced_img = model(image)
 
-        image_out_path = os.path.join(args.output_dir, os.path.basename(image_out_path))
+        image_out_path = os.path.join(args.output_dir, os.path.basename(image_path))
         torchvision.utils.save_image(enhanced_img, image_out_path)
